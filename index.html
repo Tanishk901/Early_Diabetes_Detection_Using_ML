@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Diabetes Predictor</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style1.css') }}">
+  <style>
+    body {
+      background: #FF6F61; /* Gradient Background Color */
+      font-family: 'Arimo', sans-serif;
+    }
+
+    .login {
+      width: 300px;
+      margin: 30px auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 4px;
+      box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+    }
+
+    .login h1 {
+      color: #333;
+      font-size: 24px;
+      text-align: center;
+      margin-bottom: 20px;
+      font-family: 'Pacifico', cursive;
+    }
+
+    input[type="text"] {
+      width: calc(100% - 20px);
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      width: calc(100% - 20px);
+      background: #FF6F61;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: #00FF00;
+    }
+
+    .btn-block {
+      display: block;
+    }
+
+    .btn-large {
+      font-size: 16px;
+    }
+
+    .prediction {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 18px;
+      color: #333;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="login">
+    <h1>Diabetes Predictor</h1>
+
+    <form action="{{ url_for('predict') }}" method="post">
+      <input type="text" name="Pregnancies" placeholder="Pregnancies" required="required" />
+      <input type="text" name="Glucose" placeholder="Glucose" required="required" />
+      <input type="text" name="Insulin" placeholder="Insulin" required="required" />
+      <input type="text" name="BMI" placeholder="BMI" required="required" />
+      <input type="text" name="DiabetesPedigreeFunction" placeholder="DiabetesPedigreeFunction" required="required" />
+      <input type="text" name="Age" placeholder="Age" required="required" />
+
+      <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+    <br>
+    <br>
+    {{ prediction_text }}
+  </div>
+</body>
+</html>

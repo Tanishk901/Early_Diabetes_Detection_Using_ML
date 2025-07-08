@@ -3,6 +3,6 @@
 ### 2.) Got Dataset from Kaggle
 ### 3.) Cleaned the Data
 ### 4.) Applied Data Visualization Techniques 
-### 4.) Trained Models on the dataset
+### 5.) Trained Models on the dataset
 ### 5.) Achieved 97% Accuracy in Random Forest Classifier
 ### 6.) Developed a Website Using Flask framework

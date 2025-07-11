@@ -1,6 +1,6 @@
 # Includes the Description of The Early Diabetes Detection Using ML Project -  ###
 ### 1.) Made using Python and Machine Learning
-### 2.) Got Dataset from Kaggle
+### 2.) Got the Dataset from Kaggle
 ### 3.) Cleaned the Dataset
 ### 4.) Applied Data Visualization Techniques 
 ### 5.) Trained Models on the dataset
